@@ -50,7 +50,7 @@ gem 'paperclip'
 gem 'delayed_paperclip'
 gem 'aws-sdk', '< 2.0'
 
-gem 'devise'
+gem 'devise', '~> 3.5.2'
 # Use Capistrano for deployment
 # gem 'capistrano-rails', group: :development
 

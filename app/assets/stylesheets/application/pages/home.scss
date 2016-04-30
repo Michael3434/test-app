@@ -96,9 +96,7 @@
     margin-bottom: 35px;
   }
   .row > div {
-    padding-left: 0px;
-    padding-right: 15px;
-    padding-top: 15px;
+    padding: 10px
   }
   .picture-wrapper {
     position: relative;
@@ -276,10 +274,14 @@
       width: 76px;
     }
   }
+  .icon-le-par {
+    padding-left: 30px;
+  }
   .icon-20-min {
     @include bp-min($screen-md) {
       width: 12%;
       padding-right: 0px;
+      padding-left: 45px;
     }
     img {
       width: 55px;
