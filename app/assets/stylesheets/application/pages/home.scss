@@ -264,23 +264,26 @@
 .press {
   .icon {
     text-align: center;
-    width: 22%;
-    float: left;
     img {
       width: 150px;
     }
-    @include bp-small {
-      width: 50%;
+    @include bp-medium {
+      margin: 10px;
+    }
+  }
+  .icon-wedemain {
+    img {
+      width: 76px;
     }
   }
   .icon-20-min {
-    width: 10%;
+    @include bp-min($screen-md) {
+      width: 12%;
+      padding-right: 0px;
+    }
     img {
       width: 55px;
-      @include bp-small {
-        right: 22px;
-        position: relative;
-      }
+      padding-right: 0;
     }
   }
 }
