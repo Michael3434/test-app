@@ -20,6 +20,13 @@
 <body class="admin <%= controller_name %> <%= action_name %>">
   <%= render 'layouts/navbar' %>
   <%= yield %>
+
+  <div id="users_modal_container">
+    <% if !user_signed_in? %>
+      <%= render "users/signup_modal" %>
+    <% end %>
+  </div>
+
   <%= render 'layouts/footer' %>
 </body>
 </html>

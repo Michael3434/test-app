@@ -1,12 +1,13 @@
 <div class="signup_form">
   <%= simple_form_for :user,
-                                url: registration_path("user"),
+                            url: registration_path("user"),
                             wrapper: :vertical_form,
                            defaults: { label_html: { class: "sr-only"},
                          input_html: { class: "input-lg" }},
                                html: { class: "form form-horizontal", id: "new_user" } do |f| %>
     <%= f.input :first_name, placeholder: "Prénom" %>
     <%= f.input :last_name, placeholder: "Nom" %>
+    <%= f.input :city, input_html: { value: params[:city] }, placeholder: "Votre ville" %>
     <%= f.input :email, placeholder: "Email" %>
     <%= f.input :password, placeholder: "Mot de passe", required: true, hint: ("#{@minimum_password_length} characters minimum" if @validatable) %>
     <p class="disclaimer">

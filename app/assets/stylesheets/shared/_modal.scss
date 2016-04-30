@@ -1,0 +1,94 @@
+// Nuke the body scrolling when modal is open
+body.modal-open {
+  @include bp-small {
+    overflow: hidden;
+    position:fixed;
+    width: 100%;
+  }
+}
+
+.modal {
+  .modal-header {
+    border-bottom: 0;
+    padding: 0 0 10px 0;
+    @include bp-small {
+      margin-top: 15px;
+      padding-bottom: 15px;
+    }
+    .modal-title {
+      font-size: 28px;
+      font-weight: 400;
+      color: $gray;
+      letter-spacing: -0.8px;
+      text-align: center;
+      margin: 0;
+    }
+    .modal-subtitle {
+      text-align: center;
+      font-size: 16px;
+      font-style: italic;
+      color: #565a5c;
+    }
+    button.close {
+      position: absolute;
+      right: 15px;
+      top: -5px;
+      font-weight: 300;
+      font-size: 40px;
+    }
+  }
+  // modal-dialog: the black overlay on the body
+  .modal-dialog {
+    @include bp-small {
+      margin: 0;
+      position: fixed;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      // modal-content: the outermost white-background
+      .modal-content {
+        border: none;
+        border-radius: 0;
+        box-shadow: none;
+        position: fixed;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        // Scroll modal on white bg
+        overflow-y: scroll;
+      }
+    }
+  }
+  .modal-md {
+    @include bp-min($screen-sm) {
+      width: 444px;
+    }
+  }
+  .modal-body {
+    font-size: 16px;
+    padding: 20px 35px;
+    .modal-text {
+      color: $gray;
+      font-size: 16px;
+      font-weight: 300;
+    }
+    @include bp-small {
+      // remove top spaces because header is visible on mobile
+      padding-top: 0 !important;
+      .modal-title {
+        margin-top: 0;
+      }
+    }
+  }
+  .container {
+    width: 80%;
+    @include bp-small {
+      width: 100%;
+      padding-left: 0;
+      padding-right: 0;
+    }
+  }
+}
+

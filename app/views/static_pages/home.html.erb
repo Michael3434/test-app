@@ -29,8 +29,9 @@
       <% cities.each do |city| %>
         <div class="col-xs-10 col-xs-offset-1 col-sm-4 col-sm-offset-0 col-md-4 text-center">
           <div class="picture-wrapper" >
-            <div class="city-picture">
-              <%= link_to facebook_url(city), class: "city-image-link", target: :_blank do %>
+            <div class="city-picture" data-city=<%= city %>>
+              <a class="hidden <%= city %>" href=<%= facebook_url(city) %>></a>
+              <%= link_to current_user ? facebook_url(city) : "", class: "city-image-link" do %>
                 <div class="city-title"><%= city %></div>
                 <%= image_tag "cities/#{city}.jpg", class: "" %>
               <% end %>

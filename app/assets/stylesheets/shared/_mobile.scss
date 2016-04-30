@@ -1,0 +1,44 @@
+.hide-sm {
+  @include bp-small {
+    display: none !important;
+  }
+}
+
+.hide-xs {
+  @include bp-extra-small  {
+    display: none !important;
+  }
+}
+
+.hide-md {
+  @include bp-medium {
+    display: none !important;
+  }
+}
+
+.hide-lg {
+  @include bp-large {
+    display: none !important;
+  }
+}
+
+.show-sm {
+  display: none;
+  @include bp-small {
+    display: block;
+  }
+}
+
+.show-md {
+  display: none;
+  @include bp-medium {
+    display: block;
+  }
+}
+
+.show-lg {
+  display: none;
+  @include bp-large {
+    display: block;
+  }
+}

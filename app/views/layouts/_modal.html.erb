@@ -1,0 +1,13 @@
+<div class="modal fade" id="<%= modal_name %>_modal" role="dialog">
+  <div class="modal-dialog <%= modal_size %>">
+    <div class="modal-content">
+      <div class="modal-body">
+        <div class="modal-header">
+          <button type="button" class="close show-sm" data-dismiss="modal" aria-label="Close"><span>&times;</span></button>
+          <p class="modal-title"><%= modal_title %></p>
+        </div>
+        <%= yield %>
+      </div>
+    </div>
+  </div>
+</div>

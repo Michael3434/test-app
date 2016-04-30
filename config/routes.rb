@@ -2,6 +2,9 @@ Rails.application.routes.draw do
 
   root 'static_pages#home'
   devise_for :users, controllers: { sessions: "users/sessions", registrations: "users/registrations"}
+  get "sign_up", to: redirect("/")
+   get "users/sign_up", to: redirect("/")
+
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 
