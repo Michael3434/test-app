@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg width="32px" height="32px" viewBox="0 0 32 32" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:sketch="http://www.bohemiancoding.com/sketch/ns">
+    <!-- Generator: Sketch 3.2.2 (9983) - http://www.bohemiancoding.com/sketch -->
+    <title>ico-deviantart</title>
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" sketch:type="MSPage">
+        <g id="navigation" sketch:type="MSArtboardGroup" transform="translate(-413.000000, -277.000000)" fill="#FFFFFF">
+            <g id="1423709164_Reddit" sketch:type="MSLayerGroup" transform="translate(373.000000, 277.000000)">
+                <g id="Page-1" sketch:type="MSShapeGroup">
+                    <g id="Reddit">
+                        <path d="M72,16 C72,7.16344358 64.8365564,0 56,0 C47.1634436,0 40,7.16344358 40,16 C40,24.8365564 47.1634436,32 56,32 C64.8365564,32 72,24.8365564 72,16 L72,16 Z M70.08,16 C70.08,8.22383034 63.7761697,1.92 56,1.92 C48.2238303,1.92 41.92,8.22383034 41.92,16 C41.92,23.7761697 48.2238303,30.08 56,30.08 C63.7761697,30.08 70.08,23.7761697 70.08,16 L70.08,16 Z M50.2744086,24.8533333 L53.7105991,24.8533333 L54.0458372,24.5597133 L55.6382181,21.7703226 L56.2248848,21.44 L62.0077419,21.44 L62.0077419,17.2192115 L58.8648848,17.2192115 L58.4877419,16.8888889 L62.0077419,10.8696774 L62.0077419,7.78666667 L58.5715515,7.78666667 L58.1944086,8.04358423 L56.6020276,10.8329749 L56.1410753,11.1632975 L50.2744086,11.1632975 L50.2744086,15.4941935 L53.5010753,15.4941935 L53.7525038,15.7144086 L50.2744086,21.7336201 L50.2744086,24.8533333 Z" id="ico-deviantart"></path>
+                    </g>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

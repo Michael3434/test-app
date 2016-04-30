@@ -1,14 +1,25 @@
 <!DOCTYPE html>
 <html>
+<!DOCTYPE html>
+<html>
 <head>
-  <title>CohomeRails</title>
-  <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
+  <title>Cohome | Travaillez chez les autres</title>
+  <!-- Dont index these pages on search engines -->
+  <meta name="robots" content="noindex">
+  <meta name="googlebot" content="noindex">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track' => true %>
+  <%= stylesheet_link_tag 'http://code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css' %>
+  <!--[if lte IE 9]>
+    <%= stylesheet_link_tag 'ie9' %>
+  <![endif]-->
   <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
   <%= csrf_meta_tags %>
 </head>
-<body>
-
-<%= yield %>
+<body class="admin <%= controller_name %> <%= action_name %>">
+  <%= render 'layouts/navbar' %>
+  <%= yield %>
 
 </body>
 </html>

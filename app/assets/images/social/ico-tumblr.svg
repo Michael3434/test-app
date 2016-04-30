@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg width="32px" height="32px" viewBox="0 0 32 32" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:sketch="http://www.bohemiancoding.com/sketch/ns">
+    <!-- Generator: Sketch 3.2.2 (9983) - http://www.bohemiancoding.com/sketch -->
+    <title>ico-tumblr</title>
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" sketch:type="MSPage">
+        <g id="navigation" sketch:type="MSArtboardGroup" transform="translate(-388.000000, -496.000000)" fill="#FFFFFF">
+            <g id="1423709138_Tumblr" sketch:type="MSLayerGroup" transform="translate(388.000000, 496.000000)">
+                <g id="Page-1" sketch:type="MSShapeGroup">
+                    <g id="Tumblr">
+                        <path d="M16,32 C24.8365564,32 32,24.8365564 32,16 C32,7.16344358 24.8365564,0 16,0 C7.16344358,0 0,7.16344358 0,16 C0,24.8365564 7.16344358,32 16,32 L16,32 Z M16,30.08 C23.7761697,30.08 30.08,23.7761697 30.08,16 C30.08,8.22383034 23.7761697,1.92 16,1.92 C8.22383034,1.92 1.92,8.22383034 1.92,16 C1.92,23.7761697 8.22383034,30.08 16,30.08 L16,30.08 Z M12.8775758,14.9942861 L12.8775758,18.9296894 C12.984834,22.147567 14.8156144,22.8183486 16.9503032,23.04 C18.1913181,22.9803658 19.7116484,22.5362241 20.48,21.946832 L20.48,19.7167699 C19.491258,20.6449001 16.8379094,21.5553241 16.3620206,18.9296894 L16.3167677,14.950559 L20.48,14.9942861 L20.48,12.3269571 L16.3167677,12.3269571 L16.4072726,8.96 L14.7329295,9.00372704 C14.8481796,11.8758262 13.2684977,12.2602957 11.52,12.3706833 L11.52,14.9942861 L12.8775758,14.9942861 L12.8775758,14.9942861 Z" id="ico-tumblr"></path>
+                    </g>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

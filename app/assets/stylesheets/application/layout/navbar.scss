@@ -1,0 +1,39 @@
+.navbar {
+  padding: 10px;
+  background-color: rgba(0,0,0,0.6);
+  z-index: 3;
+  border: none;
+  border-radius: 0px;
+  .navbar-collapse {
+    border-color: #696969;
+  }
+  .navbar-header {
+    margin-left: 70px;
+    .navbar-brand {
+      font-family: "CaviarDreams";
+      font-size: 40px;
+      color: #1ca298;
+      top: 9px;
+    }
+  }
+  .navbar-nav > li > a {
+    color: #ee4e44;
+    text-transform: uppercase;
+    font-size: 14px;
+    font-weight: 500;
+    margin-right: 10px;
+    &:hover, &:active, &:focus {
+      color: rgba(238, 78, 68, 0.59);
+    }
+  }
+  .flag {
+    background-image: image-url("frenchflag.png");
+    padding: 5px;
+    position: relative;
+    height: 20px;
+    width: 30px;
+    top: 14px;
+    background-repeat: no-repeat;
+    margin-left: 10px;
+  }
+}

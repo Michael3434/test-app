@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg width="32px" height="32px" viewBox="0 0 32 32" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:sketch="http://www.bohemiancoding.com/sketch/ns">
+    <!-- Generator: Sketch 3.2.2 (9983) - http://www.bohemiancoding.com/sketch -->
+    <title>ico-email</title>
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" sketch:type="MSPage">
+        <g id="navigation" sketch:type="MSArtboardGroup" transform="translate(-380.000000, -792.000000)" fill="#FFFFFF">
+            <g id="1423709117_Mail" sketch:type="MSLayerGroup" transform="translate(380.000000, 792.000000)">
+                <g id="Page-1" sketch:type="MSShapeGroup">
+                    <g id="Mail">
+                        <path d="M16,0 C7.16344358,0 0,7.16344358 0,16 C0,24.8365564 7.16344358,32 16,32 C24.8365564,32 32,24.8365564 32,16 C32,7.16344358 24.8365564,0 16,0 L16,0 Z M16,1.92 C8.22383034,1.92 1.92,8.22383034 1.92,16 C1.92,23.7761697 8.22383034,30.08 16,30.08 C23.7761697,30.08 30.08,23.7761697 30.08,16 C30.08,8.22383034 23.7761697,1.92 16,1.92 L16,1.92 Z M23.68,20.4573912 L23.68,10.88 L18.08824,16.2971465 L23.68,20.4573912 L23.68,20.4573912 Z M8.32,20.4573912 L13.91164,16.296564 L8.32,10.88 L8.32,20.4573912 L8.32,20.4573912 Z M14.66497,17.0270355 L8.32,21.12 L23.68,21.12 L17.33488,17.0270355 L16,18.3200531 L14.66497,17.0270355 L14.66497,17.0270355 Z M8.7808,10.88 L16,16.677204 L23.2192,10.88 L8.7808,10.88 L8.7808,10.88 Z" id="ico-email"></path>
+                    </g>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>
