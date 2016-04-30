@@ -1,3 +1,11 @@
+<% content_for :title, "accueil" %>
+<% content_for :description, "Travaillez avec des indépendants passionnés à deux pas de chez vous !" %>
+<% content_for :og_url, "http://cohome.in" %>
+<% content_for :og_title, "Travailler les uns chez les autres" %>
+<% content_for :og_type, "article" %>
+<% content_for :og_description, "Trouvez des indépendants dans toute la France: Bordeaux, Grenoble, Lille, Lyon, Marseille, Montpellier, Nantes, Paris, Rennes, Strasbourg et Toulouse" %>
+
+
 <%= content_tag :section, class: "hero" do %>
   <div class="hero-info">
     <h1>
@@ -22,7 +30,7 @@
         <div class="col-xs-10 col-xs-offset-1 col-sm-4 col-sm-offset-0 col-md-4 text-center">
           <div class="picture-wrapper" >
             <div class="city-picture">
-              <%= link_to "", class: "city-image-link" do %>
+              <%= link_to facebook_url(city), class: "city-image-link", target: :_blank do %>
                 <div class="city-title"><%= city %></div>
                 <%= image_tag "cities/#{city}.jpg", class: "" %>
               <% end %>
@@ -32,8 +40,8 @@
       <% end %>
       <div class="col-xs-10 col-xs-offset-1 col-sm-4 col-sm-offset-0 col-md-4 text-center">
         <div class="picture-wrapper" >
-          <div class="city-picture">
-            <%= link_to "", class: "city-image-link" do %>
+          <div class="city-picture ">
+            <%= link_to "", class: "city-image-link new-city" do %>
               <div class="city-title">Je propose ma ville </div>
             <% end %>
           </div>
@@ -101,23 +109,6 @@
 </section>
 
 <hr>
-
-<section class="social-network">
-  <div class="col-md-6 col-md-offset-3 col-xs-8 col-xs-offset-2">
-    <div class="social-icon clearfix text-center">
-      <div class="col-md-3 col-xs-3"><a href="https://www.facebook.com/cohome.in" title="Facebook" target="_blank"><%= embedded_svg "social/ico-facebook.svg", class: "" %></a></div>
-      <div class="col-md-3 col-xs-3"><a href="https://twitter.com/cohome_in" title="Twitter" target="_blank"><%= embedded_svg "social/ico-twitter.svg", class: "" %></a></div>
-      <div class="col-md-3 col-xs-3"><a href="https://www.instagram.com/cohome_in/" title="Instagram" target="_blank"><%= embedded_svg "social/ico-instagram.svg" %></a></div>
-      <div class="col-md-3 col-xs-3"><a href="https://www.youtube.com/channel/UCUlKUkwum9TLnQVg8uxY5uQ" title="Youtube" target="_blank"><%= embedded_svg "social/ico-youtube.svg", class: "" %></a></div>
-    </div>
-    <div class="info-footer text-center">
-      <p>Copyright 2016 Cohome.</p>
-      <p>All Rights Reserved</p>
-      <p>Pictures from Laurent Martinet, <a href="http://www.imothep-production.com/" target="_blank">Imothep Production.</a></p>
-      <p><a href="http://www.imothep-production.com/" target="_blank">CGU</a></p>
-    </div>
-  </div>
-</section>
 
 <div class="modal fade" id="video-modal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
   <div class="modal-dialog" role="document">

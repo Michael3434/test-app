@@ -145,9 +145,15 @@
       .city-title {
         position: relative;
         z-index: 4;
-        top: 110px;
         color: #FFFFFF;
         font-size: 30px;
+        margin-top: 28%;
+      }
+      .new-city {
+        background-color: #09A298;
+        &:before {
+          background-color: transparent;
+        }
       }
     }
   }
@@ -279,7 +285,8 @@
   }
 }
 
-.social-network {
+footer {
+  margin-bottom: 25px;
   .social-icon {
     margin-bottom: 20px;
   }
