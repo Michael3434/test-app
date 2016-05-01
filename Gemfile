@@ -1,11 +1,13 @@
 source 'https://rubygems.org'
 
+ruby '2.2.4'
 
-# Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '4.2.4'
+
 ## BACK END ##
 gem 'pg'
 gem 'slack-notifier'
+
 # Use Uglifier as compressor for JavaScript assets
 gem 'uglifier', '>= 1.3.0'
 # Use CoffeeScript for .coffee assets and views
@@ -66,6 +68,11 @@ group :development do
   gem 'spring'
   gem 'spring-commands-rspec'
   gem 'spring-commands-sidekiq', git: 'git@github.com:johnvoloski/spring-commands-sidekiq.git', branch: 'master'
+end
+
+groupe :production do
+  gem 'rails_12factor' #heroku needs it
+
 end
 
 # Config file
