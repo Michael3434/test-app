@@ -290,6 +290,15 @@
   }
 }
 
+#video-modal {
+  #ytplayer {
+    width: 100%;
+    @include bp-small {
+      margin-top: 10%;
+    }
+  }
+}
+
 footer {
   margin-bottom: 25px;
   .social-icon {
