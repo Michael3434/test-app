@@ -1,0 +1,103 @@
+// Colors
+$brand-primary: #1ca298;
+$brand-secondary: #2EBBC6;
+$brand-success: #FC7278;
+$brand-cta: #FC7278;
+$brand-brown: #836d5e;
+$brand-success: #edcd23;
+$beach: #FFB400;
+$low-season: #2EBBC6;
+$medium-season: #24949C;
+$high-season: #1A6A70;
+$green: #27AD29;
+
+$brand-action: lighten($brand-secondary, 10%);
+$brand-valid: #00bb00;
+
+$body-bg: #fff;
+
+$gray: #565a5C; // was #555
+$gray-light: #999; // was #777
+
+$border-success: transparentize($brand-success, 0.5);
+$border-primary: transparentize($brand-primary, 0.5);
+
+// Fonts
+$font-family-sans-serif: "Roboto", "Helvetica Neue", Arial, sans-serif;
+$font-size-base: 14px;
+$font-size-large: 16px;
+$line-height-base: 1.5;
+$headings-color: $gray;
+
+// Grid
+$container-large-desktop: 1020px;
+
+// Links
+$link-color: $brand-secondary;
+$link-hover-color: darken($brand-secondary, 15%);
+
+// Components
+$border-radius-base: 2px;
+$border-radius-large: 4px;
+
+// Forms
+// $input-border: #999;
+// $input-border-radius: 3px;
+$input-border-focus: $brand-secondary;
+
+// Alerts
+// $state-danger-text: #E65653;
+$state-danger-text: #DE3B38;
+
+// Navbars
+$navbar-height: 50px;
+$navbar-border-radius: 0;
+$navbar-default-color: #fff;
+$navbar-default-bg: $brand-primary;
+$navbar-margin-bottom: 0;
+$navbar-padding-horizontal: 10px;
+$navbar-default-link-active-bg: rgba(255,255,255,0);
+$navbar-default-link-color: white;
+$navbar-default-link-active-color: $brand-secondary;
+$navbar-default-link-hover-color: $brand-secondary;
+$navbar-default-toggle-icon-bar-bg: white;
+$navbar-default-toggle-hover-bg: $brand-primary;
+
+$navbar-inverse-bg: rgba(0,0,0,0);
+$navbar-inverse-link-color: #fff;
+$navbar-inverse-link-hover-color: $brand-success;
+$navbar-inverse-toggle-hover-bg: transparent;
+$navbar-inverse-toggle-icon-bar-bg: #fff;
+$navbar-inverse-toggle-border-color: #fff;
+
+// Dropdowns
+$dropdown-link-color: $gray !important;
+$dropdown-link-hover-background: #fff !important;
+$dropdown-link-hover-color: $brand-secondary !important;
+$dropdown-link-active-bg: #fff !important;
+
+// Screen sizes
+$screen-lg-min: 1200px;
+$screen-lg: $screen-lg-min;
+$screen-xlg-min: 1600px;
+
+$grid-float-breakpoint: 768px;
+$grid-gutter-width: 25px;
+$space-unit: $grid-gutter-width / 4;
+
+// Pagination
+$pagination-bg: white;
+$pagination-border: #f1f1f1;
+$pagination-color: $gray;
+$pagination-hover-color: $gray;
+$pagination-hover-bg: darken($pagination-bg, 15%);
+$pagination-active-bg: $gray;
+$pagination-active-border: $gray;
+
+// Tooltips
+$tooltip-bg: #fff;
+$tooltip-color: $gray;
+$tooltip-arrow-width: 8px;
+
+// Thumbnails
+$thumbnail-bg: white;

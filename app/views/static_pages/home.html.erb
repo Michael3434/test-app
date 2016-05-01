@@ -29,8 +29,9 @@
       <% cities.each do |city| %>
         <div class="col-xs-10 col-xs-offset-1 col-sm-4 col-sm-offset-0 col-md-4 text-center">
           <div class="picture-wrapper" >
-            <div class="city-picture">
-              <%= link_to facebook_url(city), class: "city-image-link", target: :_blank do %>
+            <div class="city-picture" data-city=<%= city %>>
+              <a class="hidden <%= city %>" href=<%= facebook_url(city) %>></a>
+              <%= link_to current_user ? facebook_url(city) : "", class: "city-image-link" do %>
                 <div class="city-title"><%= city %></div>
                 <%= image_tag "cities/#{city}.jpg", class: "" %>
               <% end %>
@@ -84,25 +85,30 @@
 <section class="press" id="press">
   <div class="container content-wrapper">
     <div class="row">
-     <div class="icon-elle icon clearfix">
+     <div class="icon-elle icon clearfix col-md-2">
       <a href="http://www.elle.fr/Societe/Le-travail/Forum-ELLE-Active/Paris-27-et-28-mars/Programme-vendredi/En-seance-pleniere-l-union-fera-notre-force-2894372" target="_blank">
         <%= image_tag "media/elle.png", class: "" %>
       </a>
      </div>
-     <div class="icon-le-par icon clearfix">
+     <div class="icon-le-par icon clearfix col-md-2">
       <a href="http://www.leparisien.fr/espace-premium/hauts-de-seine-92/elle-propose-d-installer-son-bureau-dans-votre-salon-02-03-2016-5590443.php" target="_blank">
         <%= image_tag "media/le_parisien.png", class: "" %>
      </div>
-      <div class="icon-20-min icon clearfix">
+      <div class="icon-20-min icon clearfix col-md-2">
         <a href="http://www.20minutes.fr/paris/1789091-20160217-paris-viens-travailler-chez-grand-salon" target="_blank">
         <%= image_tag "media/20_minutes.png", class: "" %>
      </div>
-     <div class="icon-les-inr icon clearfix">
+     <div class="icon-les-inr icon clearfix col-md-2">
       <a href="http://www.lesinrocks.com/2015/12/22/actualite/viens-chez-moi-je-bosse-a-la-maison-le-coworking-a-domicile-se-developpe-11794662/" target="_blank">
         <%= image_tag "media/les_inrocks.png", class: "" %>
       </a>
      </div>
-     <div class="icon-tf1 icon clearfix">
+     <div class="icon-wedemain icon col-md-2">
+      <a href="http://www.wedemain.fr/Cohome-la-plateforme-qui-permet-aux-freelances-de-co-worker-a-la-maison_a1671.html" target="_blank">
+       <%= image_tag "media/wedemain.png", class: "" %>
+      </a>
+     </div>
+     <div class="icon-tf1 icon clearfix col-md-2">
         <%= image_tag "media/tf1.png", class: "" %>
     </div>
   </div>

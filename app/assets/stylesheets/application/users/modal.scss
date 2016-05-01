@@ -1,0 +1,80 @@
+#signup_modal {
+  .help-block {
+    margin-bottom: 0;
+    margin-top: 0;
+    margin-left: 5px;
+    display: inline-block;
+    font-style: italic;
+    font-size: 12px;
+  }
+  .modal-title {
+    font-size: 28px;
+    font-weight: 400;
+    color: #565a5c;
+    letter-spacing: -0.8px;
+    text-align: center;
+    margin: 0;
+  }
+  .modal-body {
+    .spinner {
+      right: 10px;
+    }
+    .step-1,
+    .step-2 {
+      margin-top: 20px;
+    }
+    table {
+      width: 100%;
+      > tbody > tr > td {
+        width: 50%;
+        vertical-align: top;
+        &:first-child {
+          padding-right: 20px;
+          border-right: 1px solid #eee;
+        }
+        &:last-child {
+          padding-left: 20px;
+          @include bp-small {
+            padding-left: 0;
+          }
+        }
+      }
+    }
+    .form-group {
+      margin-left: 0;
+      margin-right: 0;
+      margin-bottom: 5px;
+      &.has-error {
+        .help-block {
+
+        }
+      }
+    }
+  }
+  .disclaimer {
+    font-size: 12px;
+    color: $gray-light;
+  }
+  .benefits-list {
+    @extend .list-unstyled;
+    li {
+      @extend .clearfix;
+      min-height: 28px;
+      position: relative;
+      margin-bottom: 15px;
+    }
+    .icon {
+      float: left;
+      color: $brand-primary;
+      position: absolute;
+      top: 15px;
+      top: calc(50% - 14px);
+    }
+    p {
+      font-weight: 300;
+      margin: 0;
+      padding-left: 45px;
+      color: $gray;
+    }
+  }
+}

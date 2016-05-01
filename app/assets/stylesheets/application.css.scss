@@ -4,8 +4,12 @@
 @import "font-awesome";
 
 @import "utilities/*";
+@import "variables";
 @import "mixins/*";
+
+@import "shared/*";
 @import "application/pages/*";
+@import "application/users/*";
 
 @import "application/layout";
 

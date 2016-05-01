@@ -1,0 +1,8 @@
+@mixin brightness($percent)
+{
+  filter: brightness($percent);
+  -webkit-filter: brightness($percent);
+  -moz-filter: brightness($percent);
+  -o-filter: brightness($percent);
+  -ms-filter: brightness($percent);
+}
