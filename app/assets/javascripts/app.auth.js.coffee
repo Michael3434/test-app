@@ -22,10 +22,15 @@ app.auth =
       $(this).render_form_errors('user', xhr.responseJSON.errors)
     signupSuccess: (e, data, status, xhr) ->
       $('.step-1').hide()
-      $(".step-2 > p > .city").html(data.city)
-      $('.step-2').show()
       url = app.auth.facebookUrl(data.city)
-      setTimeout ( -> window.location.replace(url) ), 3000
+      if url == ""
+        $(".step-3 > p > .city").html(data.city)
+        $('.step-3').show()
+        $('.btn-closing').on "click", -> $("#signup_modal").modal('hide')
+      else
+        $(".step-2 > p > .city").html(data.city)
+        $('.step-2').show()
+        setTimeout ( -> window.location.replace(url) ), 5000
     resetModal: ->
       $("form#new_user").clear_form_errors()
       $("form.new_session").clear_form_errors()
@@ -53,5 +58,7 @@ app.auth =
           "https://www.facebook.com/groups/1542943339334782/"
         when "Toulouse"
           "https://www.facebook.com/groups/978940688825892/"
+        else
+          ""
 
 
