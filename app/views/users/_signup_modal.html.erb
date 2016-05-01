@@ -1,24 +1,8 @@
-<%= render layout: "layouts/modal", locals: { modal_name: "signup", modal_size: "", modal_title: "Rejoignez la commauté de votre ville" } do %>
+<%= render layout: "layouts/modal", locals: { modal_name: "signup", modal_size: "", modal_title: "S'inscire sur Cohome" } do %>
   <div class="step-1">
     <table class="modal-layout">
       <tbody>
         <tr>
-          <td class="hide-sm">
-            <ul class="benefits-list">
-              <li><span class="icon"><i class="fa fa-users fa-2x"></i></span>
-                  <p>Vous êtes gentiment accueilli par votre hôte.</span></p>
-              </li>
-              <li><span class="icon"><%= icon("fa fa-coffee", class: "fa-2x") %></span>
-                  <p>Vous faites connaissance autour d’un café.</span></p>
-              </li>
-              <li><span class="icon"><%= icon("fa fa-tasks", class: "fa-2x") %></span>
-                  <p>Tous les professionnels présents se concentrent sur leurs projets individuels.</p>
-              </li>
-              <li><span class="icon"><i class="fa fa-2x fa-thumbs-o-up"></i></span>
-                  <p><span class="normal">Ponctuez vos journées d’instants de partage et d’éventuelles collaborations.</p>
-              </li>
-            </ul>
-          </td>
           <td>
             <div class="signup_form">
               <%= simple_form_for :user, remote: true,
@@ -37,7 +21,7 @@
                   <strong>Notre engagement</strong> : vos coordonnées ne seront jamais communiquées.
                 </p>
 
-                <%= button_tag "Je rejoins ma communauté", type: "submit", class: "btn btn-lg btn-action" %>
+                <%= button_tag "Rejoindre la communauté Cohome", type: "submit", class: "btn btn-lg btn-action" %>
               <% end %>
             </div>
           </td>
