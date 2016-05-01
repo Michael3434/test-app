@@ -7,7 +7,63 @@
 # Ignore bundler config.
 /.bundle
 
+# Ignore the default SQLite database.
+/db/*.sqlite3
+/db/*.sqlite3-journal
+
+# Ignore generated csv
+db/salesforce/*.csv
+db/stats/*.csv
+db/visits/*.csv
+db/extracts/*.csv
+
 # Ignore all logfiles and tempfiles.
-/log/*
-!/log/.keep
+/log/*.log
 /tmp
+
+# Ignore SVGs for now
+
+
+# Zeus
+custom_plan.rb
+zeus.json
+
+.ruby-gemset
+.ruby-version
+
+app/assets/sample_search.js
+app/assets/stylesheets/sample_style.css
+
+# Dumpfiles
+*.dump
+*.rdb
+
+# Images for mailers
+app/assets/images/mailer/
+app/assets/sample_map_search
+app/assets/images/temp/*
+
+# All the old files
+*_old*
+
+# Ignore those fonts
+app/assets/fonts/calluna/*
+app/assets/fonts/DIN/*
+
+# Application.yml
+config/application.yml
+
+# Remove .DS_Store
+.DS_Store
+.env
+
+# Archives
+/app/assets/stylesheets/archives/*
+/app/assets/javascripts/archives/*
+
+# Spring
+bin/rspec
+bin/sidekiq
+
+# Salesforce
+db/salesforce/
