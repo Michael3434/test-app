@@ -1,0 +1,9 @@
+fr:
+  activerecord:
+    errors:
+      models:
+        user:
+          attributes:
+            email:
+              blank: "Ce champ est obligatoire"
+              not_found: "Cette email n'est pas valide"
