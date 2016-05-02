@@ -7,7 +7,8 @@ app.auth =
   init: ->
     @signup.init()
     @signin.init()
-    $('.want-to-signin').click @showsSignUp
+    $('.want-to-signin').click @showsSignIn
+    $('.want-to-signup').click @showsSignUp
   signin:
     init: ->
       $(".signin").click @openModal
@@ -71,9 +72,14 @@ app.auth =
       fjs.parentNode.insertBefore js, fjs
       return
     ) document, 'script', 'facebook-jssdk'
-  showsSignUp: ->
+  showsSignUp: (e) ->
+    e.preventDefault()
     $("#signin_modal").modal('hide')
     $("#signup_modal").modal()
+  showsSignIn: (e) ->
+    e.preventDefault()
+    $("#signup_modal").modal('hide')
+    $("#signin_modal").modal()
   facebookUrl: (city) ->
       switch city
         when "Paris"
