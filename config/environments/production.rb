@@ -68,7 +68,17 @@ Rails.application.configure do
   # the I18n.default_locale when a translation cannot be found).
   config.i18n.fallbacks = true
 
-config.action_mailer.default_url_options = { host: "http://cohome-staging.herokuapp.com/" }
+  config.action_mailer.default_url_options = { host: "cohome-staging.herokuapp.com/" }
+
+  ActionMailer::Base.smtp_settings = {
+    :authentication => :plain,
+    :address => "smtp.mailgun.org",
+    :port => 587,
+    :domain => "sandboxc01585ce429a4cae8375eb161b9359ca.mailgun.org",
+    :user_name => ENV['MAILGUN_USERNAME'],
+    :password => ENV['MAILGUN_PASSWORD'],
+    :enable_starttls_auto => true
+  }
 
   # Send deprecation notices to registered listeners.
   config.active_support.deprecation = :notify
