@@ -28,21 +28,22 @@ app.auth =
       $(this).closest(".modal").modal("hide")
       $('.signout').removeClass('hidden')
       $('.signin').addClass('hidden')
+      $('.facebook-link').each (element, i) ->
+        $(i).removeClass('hidden')
   signup:
     init: ->
-      @openModal()
+      $(".city-picture").click @addCityToSignupForm
       $("form#new_user").on "ajax:error", @signupError
       $("form#new_user").on "ajax:success", @signupSuccess
       $("#signup_modal").on "hidden.bs.modal", @resetModal
-    openModal: ->
-      $(".city-picture").on "click", (e) ->
-        e.preventDefault()
+    addCityToSignupForm: ->
         city = $(this).data("city")
         $('#user_city').val(city)
-        $("#signup_modal").modal()
     signupError: (e, xhr, status, error) ->
       $(this).render_form_errors('user', xhr.responseJSON.errors)
     signupSuccess: (e, data, status, xhr) ->
+      $('.facebook-link').each (element, i) ->
+        $(i).removeClass('hidden')
       $('.signout').removeClass('hidden')
       $('.signin').addClass('hidden')
       $('.step-1').hide()

@@ -30,8 +30,8 @@
         <div class="col-xs-10 col-xs-offset-1 col-sm-6 col-sm-offset-0 col-md-4 text-center">
           <div class="picture-wrapper" >
             <div class="city-picture" data-city=<%= city %>>
-              <a class="hidden <%= city %>" href=<%= facebook_url(city) %>></a>
-              <%= link_to current_user ? facebook_url(city) : "", class: "city-image-link" do %>
+              <a class="hidden facebook-link <%= city %>" href=<%= facebook_url(city) %>></a>
+              <%= link_to current_user ? facebook_url(city) : "", data: {toggle: ( !current_user ? "modal" : "" ), target: "#signup_modal"}, class: "city-image-link" do %>
                 <div class="city-title"><%= city %></div>
                 <%= image_tag "cities/#{city}.jpg", class: "" %>
               <% end %>
@@ -42,7 +42,7 @@
       <div class="col-xs-10 col-xs-offset-1 col-sm-6 col-sm-offset-0 col-md-4 text-center">
         <div class="picture-wrapper" >
           <div class="city-picture ">
-            <%= link_to "", class: "city-image-link new-city" do %>
+            <%= link_to "", data: {toggle: ( !current_user ? "modal" : "" ), target: "#signup_modal"}, class: "city-image-link new-city" do %>
               <div class="city-title">Je propose ma ville </div>
             <% end %>
           </div>
