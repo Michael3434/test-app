@@ -58,6 +58,18 @@ app.auth =
     resetModal: ->
       $("form#new_user").clear_form_errors()
       $("form.new_session").clear_form_errors()
+  initFacebook: ->
+    ((d, s, id) ->
+      js = undefined
+      fjs = d.getElementsByTagName(s)[0]
+      if d.getElementById(id)
+        return
+      js = d.createElement(s)
+      js.id = id
+      js.src = '//connect.facebook.net/en_US/sdk.js#xfbml=1&version=v2.6&appId=534500913376942'
+      fjs.parentNode.insertBefore js, fjs
+      return
+    ) document, 'script', 'facebook-jssdk'
   showsSignUp: ->
     $("#signin_modal").modal('hide')
     $("#signup_modal").modal()

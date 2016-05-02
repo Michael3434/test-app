@@ -17,10 +17,7 @@
                 <%= f.input :city, placeholder: "Ville" %>
                 <%= f.input :email, placeholder: "Email" %>
                 <%= f.input :password, placeholder: "Mot de passe", required: true, hint: ("#{@minimum_password_length} characters minimum" if @validatable) %>
-                <%= f.check_box :want_host  %> <span class="want-host">J'aimerais proposer mon appartment</span>
-                <p class="disclaimer">
-                  <strong>Notre engagement</strong> : vos coordonnées ne seront jamais communiquées.
-                </p>
+                <%= f.check_box :want_host %> <span class="want-host">J'aimerais proposer mon appartment</span>
 
                 <%= button_tag "Rejoindre la communauté Cohome", type: "submit", class: "btn btn-lg btn-action" %>
               <% end %>
@@ -41,4 +38,5 @@
     <p class="signature">L'Équipe Cohome with <i class="fa fa-heart"></i></p>
     <span class="btn btn-action bnt-lg btn-closing">Fermer</span>
   </div>
+
 <% end %>
