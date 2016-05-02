@@ -1,4 +1,10 @@
 #signup_modal {
+  #user_want_host {
+    margin-bottom: 5px;
+  }
+  .want-host {
+    font-size: 15px;
+  }
   .help-block {
     margin-bottom: 0;
     margin-top: 0;
@@ -84,4 +90,7 @@
       color: $gray;
     }
   }
+}
+#signin_modal {
+
 }

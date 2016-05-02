@@ -11,12 +11,13 @@
                                         wrapper: :vertical_form,
                                        defaults: { label_html: { class: "sr-only"},
                                      input_html: { class: "" }},
-                                           html: { class: "form form-horizontal", id: "new_user" } do |f| %>
+                                           html: { class: "form form-horizontal text-center", id: "new_user" } do |f| %>
                 <%= f.input :first_name, placeholder: "Prénom" %>
                 <%= f.input :last_name, placeholder: "Nom" %>
                 <%= f.input :city, placeholder: "Ville" %>
                 <%= f.input :email, placeholder: "Email" %>
                 <%= f.input :password, placeholder: "Mot de passe", required: true, hint: ("#{@minimum_password_length} characters minimum" if @validatable) %>
+                <%= f.check_box :want_host  %> <span class="want-host">J'aimerais proposer mon appartment</span>
                 <p class="disclaimer">
                   <strong>Notre engagement</strong> : vos coordonnées ne seront jamais communiquées.
                 </p>
@@ -37,7 +38,7 @@
 
   <div class="step-3 text-center"  style="display:none;">
     <p class="modal-info text-center">Félicitation ! Nous vous informerons dès l'ouverture de COHOME à <span class="city"></span> ! Excellente journée !</p>
-    <p class="signature">L'Équipe Cohome whith love <i class="fa fa-heart"></i></p>
+    <p class="signature">L'Équipe Cohome with <i class="fa fa-heart"></i></p>
     <span class="btn btn-action bnt-lg btn-closing">Fermer</span>
   </div>
 <% end %>

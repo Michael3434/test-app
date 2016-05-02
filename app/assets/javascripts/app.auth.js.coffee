@@ -7,6 +7,7 @@ app.auth =
   init: ->
     @signup.init()
     @signin.init()
+    $('.want-to-signin').click @showsSignUp
   signin:
     init: ->
       $(".signin").click @openModal
@@ -42,6 +43,8 @@ app.auth =
     signupError: (e, xhr, status, error) ->
       $(this).render_form_errors('user', xhr.responseJSON.errors)
     signupSuccess: (e, data, status, xhr) ->
+      $('.signout').removeClass('hidden')
+      $('.signin').addClass('hidden')
       $('.step-1').hide()
       url = app.auth.facebookUrl(data.city)
       if url == ""
@@ -55,6 +58,9 @@ app.auth =
     resetModal: ->
       $("form#new_user").clear_form_errors()
       $("form.new_session").clear_form_errors()
+  showsSignUp: ->
+    $("#signin_modal").modal('hide')
+    $("#signup_modal").modal()
   facebookUrl: (city) ->
       switch city
         when "Paris"
