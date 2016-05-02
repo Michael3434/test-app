@@ -20,6 +20,12 @@
         <li><a href="#" class="nav-testimonials">Témoignages</a></li>
         <li><a href="#" data-toggle="modal" data-target="#video-modal">Comment ça marche ?</a></li>
         <li><a href="#">Blog</a></li>
+        <% if !current_user %>
+          <li class="signin"><%= link_to "Se connecter", "#" %></li>
+        <% else %>
+          <li><%= link_to icon("sign-out", "Se déconnecter"), destroy_user_session_path, method: :delete %></li>
+        <% end %>
+        <li><%= link_to icon("sign-out", "Se déconnecter"), destroy_user_session_path, method: :delete, class: "hidden signout" %>
       </ul>
     </div><!-- /.navbar-collapse -->
   </div><!-- /.container-fluid -->

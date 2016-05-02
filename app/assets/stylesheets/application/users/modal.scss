@@ -1,4 +1,10 @@
 #signup_modal {
+  #user_want_host {
+    margin-bottom: 10px;
+  }
+  .want-host {
+    font-size: 15px;
+  }
   .help-block {
     margin-bottom: 0;
     margin-top: 0;
@@ -37,7 +43,6 @@
         vertical-align: top;
         &:first-child {
           padding-right: 20px;
-          border-right: 1px solid #eee;
         }
         &:last-child {
           padding-left: 20px;
@@ -84,4 +89,7 @@
       color: $gray;
     }
   }
+}
+#signin_modal {
+
 }

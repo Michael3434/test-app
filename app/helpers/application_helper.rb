@@ -8,4 +8,25 @@ module ApplicationHelper
     end
     doc.to_html.html_safe
   end
+
+  def devise_mapping
+    Devise.mappings[:user]
+  end
+
+  def namespace_name
+    params[:controller].match(/(?<namespace>.*)\//).try(:[],"namespace")
+  end
+
+  def admin_namespace?
+    namespace_name == "admin"
+  end
+
+  def resource_name
+    devise_mapping.name
+  end
+
+  def resource_class
+    devise_mapping.to
+  end
+
 end

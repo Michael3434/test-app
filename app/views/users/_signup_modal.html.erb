@@ -1,24 +1,8 @@
-<%= render layout: "layouts/modal", locals: { modal_name: "signup", modal_size: "", modal_title: "Rejoignez la commauté de votre ville" } do %>
+<%= render layout: "layouts/modal", locals: { modal_name: "signup", modal_size: "", modal_title: "S'inscire sur Cohome" } do %>
   <div class="step-1">
     <table class="modal-layout">
       <tbody>
         <tr>
-          <td class="hide-sm">
-            <ul class="benefits-list">
-              <li><span class="icon"><i class="fa fa-users fa-2x"></i></span>
-                  <p>Vous êtes gentiment accueilli par votre hôte.</span></p>
-              </li>
-              <li><span class="icon"><%= icon("fa fa-coffee", class: "fa-2x") %></span>
-                  <p>Vous faites connaissance autour d’un café.</span></p>
-              </li>
-              <li><span class="icon"><%= icon("fa fa-tasks", class: "fa-2x") %></span>
-                  <p>Tous les professionnels présents se concentrent sur leurs projets individuels.</p>
-              </li>
-              <li><span class="icon"><i class="fa fa-2x fa-thumbs-o-up"></i></span>
-                  <p><span class="normal">Ponctuez vos journées d’instants de partage et d’éventuelles collaborations.</p>
-              </li>
-            </ul>
-          </td>
           <td>
             <div class="signup_form">
               <%= simple_form_for :user, remote: true,
@@ -27,17 +11,15 @@
                                         wrapper: :vertical_form,
                                        defaults: { label_html: { class: "sr-only"},
                                      input_html: { class: "" }},
-                                           html: { class: "form form-horizontal", id: "new_user" } do |f| %>
+                                           html: { class: "form form-horizontal text-center", id: "new_user" } do |f| %>
                 <%= f.input :first_name, placeholder: "Prénom" %>
                 <%= f.input :last_name, placeholder: "Nom" %>
                 <%= f.input :city, placeholder: "Ville" %>
                 <%= f.input :email, placeholder: "Email" %>
                 <%= f.input :password, placeholder: "Mot de passe", required: true, hint: ("#{@minimum_password_length} characters minimum" if @validatable) %>
-                <p class="disclaimer">
-                  <strong>Notre engagement</strong> : vos coordonnées ne seront jamais communiquées.
-                </p>
+                <%= f.check_box :want_host %> <span class="want-host">J'aimerais proposer mon appartment</span>
 
-                <%= button_tag "Je rejoins ma communauté", type: "submit", class: "btn btn-lg btn-action" %>
+                <%= button_tag "Rejoindre la communauté Cohome", type: "submit", class: "btn btn-lg btn-action" %>
               <% end %>
             </div>
           </td>
@@ -53,7 +35,8 @@
 
   <div class="step-3 text-center"  style="display:none;">
     <p class="modal-info text-center">Félicitation ! Nous vous informerons dès l'ouverture de COHOME à <span class="city"></span> ! Excellente journée !</p>
-    <p class="signature">L'Équipe Cohome whith love <i class="fa fa-heart"></i></p>
+    <p class="signature">L'Équipe Cohome with <i class="fa fa-heart"></i></p>
     <span class="btn btn-action bnt-lg btn-closing">Fermer</span>
   </div>
+
 <% end %>

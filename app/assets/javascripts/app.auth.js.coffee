@@ -6,6 +6,28 @@ $(document).on "ready page:load", ->
 app.auth =
   init: ->
     @signup.init()
+    @signin.init()
+    $('.want-to-signin').click @showsSignUp
+  signin:
+    init: ->
+      $(".signin").click @openModal
+      $("#signin_modal").on "shown.bs.modal", @formFocus
+      $("form.new_session").on "ajax:error", @signinError
+      $("form.new_session").on "ajax:success", @signinSuccess
+    openModal: (e) ->
+      e.preventDefault()
+      $("#signin_modal").modal()
+    formFocus: ->
+      $("#signin_modal #user_email").focus()
+    signinError: (e, xhr, status, error) ->
+      div = $(this).closest("div").find(".error_explanation")
+      alert = $("<div></div>", { class: "alert alert-danger" })
+      alert.append("<p>#{xhr.responseJSON.error}</p>")
+      div.html(alert)
+    signinSuccess: (e, data, status, xhr) ->
+      $(this).closest(".modal").modal("hide")
+      $('.signout').removeClass('hidden')
+      $('.signin').addClass('hidden')
   signup:
     init: ->
       @openModal()
@@ -21,6 +43,8 @@ app.auth =
     signupError: (e, xhr, status, error) ->
       $(this).render_form_errors('user', xhr.responseJSON.errors)
     signupSuccess: (e, data, status, xhr) ->
+      $('.signout').removeClass('hidden')
+      $('.signin').addClass('hidden')
       $('.step-1').hide()
       url = app.auth.facebookUrl(data.city)
       if url == ""
@@ -34,6 +58,21 @@ app.auth =
     resetModal: ->
       $("form#new_user").clear_form_errors()
       $("form.new_session").clear_form_errors()
+  initFacebook: ->
+    ((d, s, id) ->
+      js = undefined
+      fjs = d.getElementsByTagName(s)[0]
+      if d.getElementById(id)
+        return
+      js = d.createElement(s)
+      js.id = id
+      js.src = '//connect.facebook.net/en_US/sdk.js#xfbml=1&version=v2.6&appId=534500913376942'
+      fjs.parentNode.insertBefore js, fjs
+      return
+    ) document, 'script', 'facebook-jssdk'
+  showsSignUp: ->
+    $("#signin_modal").modal('hide')
+    $("#signup_modal").modal()
   facebookUrl: (city) ->
       switch city
         when "Paris"

@@ -1,7 +1,7 @@
 Rails.application.routes.draw do
 
   root 'static_pages#home'
-  devise_for :users, controllers: { sessions: "users/sessions", registrations: "users/registrations"}
+  devise_for :users, controllers: { sessions: "users/sessions", registrations: "users/registrations", passwords: 'passwords' }
   get "sign_up", to: redirect("/")
    get "users/sign_up", to: redirect("/")
 
