@@ -20,7 +20,7 @@ require 'phantomjs'
 		Capybara.default_driver = :poltergeist
 
 		browser = Capybara.current_session
-		byebug
+
 		url = @url
 		browser.visit url
 
@@ -33,26 +33,25 @@ require 'phantomjs'
 
 		p "Scrolling...."
 
-		10.times do 
-			browser.execute_script('window.scrollTo(0,100000)')
-			sleep(10)
-		end 
+		# 10.times do 
+		# 	browser.execute_script('window.scrollTo(0,100000)')
+		# 	sleep(10)
+		# end 
 		# browser.find('textarea').set("Bonjour")
 
 		p "Getting information..."
 
-		byebug
 		browser.all(".hero").each do |link|
 			# link.trigger("click")
 			image_url = link.find('img')['src']
 			url = link['href']
-			budget = link.find('.ribbon').text
-			name = link.find(:xpath, "..").find('.listing-head').text
+			p budget = link.find('.ribbon').text
+			p name = link.find(:xpath, "..").find('.listing-head').text
 			areas = link.find(:xpath, "..").find('h3').text
 			text = link.find(:xpath, "..").find('p').text
-				CSV.open("db/flatmates.csv", "a") do |csv|
-				 		csv << [url, budget, name, areas, text, image_url]
-				end
+				# CSV.open("db/flatmates.csv", "a") do |csv|
+				#  		csv << [url, budget, name, areas, text, image_url]
+				# end
 			p "#{name} in CSV"
 		end
 		
