@@ -10,6 +10,7 @@ gem 'slack-notifier'
 
 gem 'capybara'
 gem 'poltergeist'
+gem 'phantomjs', :require => 'phantomjs/poltergeist'
 
 # Use Uglifier as compressor for JavaScript assets
 gem 'uglifier', '>= 1.3.0'
