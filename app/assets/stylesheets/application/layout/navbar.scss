@@ -8,16 +8,22 @@
     border-color: #696969;
   }
   .navbar-header {
-    margin-left: 60px;
+    margin-left: 30px;
     .navbar-brand {
       font-family: "CaviarDreams";
       font-size: 40px;
       color: #1ca298;
       top: 9px;
     }
+    .hint {
+      bottom: -34px;
+      position: relative;
+      color: wheat;
+      font-size: 10px;
+      left: -12px;    }
   }
   .navbar-nav > li > a {
-    color: #ee4e44;
+    color: wheat;
     text-transform: uppercase;
     font-size: 14px;
     font-weight: 500;

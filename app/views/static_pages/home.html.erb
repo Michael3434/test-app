@@ -1,139 +1,14 @@
-<% content_for :title, "accueil" %>
-<% content_for :description, "Travaillez avec des indépendants passionnés à deux pas de chez vous !" %>
-<% content_for :og_url, "http://cohome.in" %>
-<% content_for :og_title, "Travailler les uns chez les autres" %>
-<% content_for :og_type, "article" %>
-<% content_for :og_description, "Trouvez des indépendants dans toute la France: Bordeaux, Grenoble, Lille, Lyon, Marseille, Montpellier, Nantes, Paris, Rennes, Strasbourg et Toulouse" %>
-
-
 <%= content_tag :section, class: "hero" do %>
   <div class="hero-info">
     <h1>
-      Travailler les uns chez les autres <br>
-    <h3>Pour booster votre journée de travail avec d'autres professionnels indépendants</h3>
-      <span class="btn btn-cta">Rejoindre la communauté</span>
+     IT'S TIME TO SCALL BRO <br><br>
+      <span class="btn btn-cta">Scall up <strong>now</strong> !</span>
     </div>
   </div>
 
   <div class="scroll-down hidden-xs">
     <div class="angle-icon-wrapper"><%= icon("angle-down", class: "fa-5x", id: "scroll-down") %></div>
-    <div>En savoir plus</div>
   </div>
 <% end %>
 
-<section class="cities" id="cities">
-  <h2 class="text-center">Partout en France</h2>
-  <p class="text-center hint">Sélectionnez une ville pour rejoindre votre communauté</p>
-  <div class="container content-wrapper">
-    <div class="row">
-      <% cities.each do |city| %>
-        <div class="col-xs-10 col-xs-offset-1 col-sm-6 col-sm-offset-0 col-md-4 text-center">
-          <div class="picture-wrapper" >
-            <div class="city-picture" data-city=<%= city %>>
-              <a class="hidden facebook-link <%= city %>" href=<%= facebook_url(city) %>></a>
-              <%= link_to current_user ? facebook_url(city) : "", data: {toggle: ( !current_user ? "modal" : "" ), target: "#signup_modal"}, class: "city-image-link" do %>
-                <div class="city-title"><%= city %></div>
-                <%= image_tag "cities/#{city}.jpg", class: "" %>
-              <% end %>
-            </div>
-          </div>
-        </div>
-      <% end %>
-      <div class="col-xs-10 col-xs-offset-1 col-sm-6 col-sm-offset-0 col-md-4 text-center">
-        <div class="picture-wrapper" >
-          <div class="city-picture ">
-            <%= link_to "", data: {toggle: ( !current_user ? "modal" : "" ), target: "#signup_modal"}, class: "city-image-link new-city" do %>
-              <div class="city-title">Je propose ma ville </div>
-            <% end %>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
-</section>
 
-<section class="testimonial" id="testimonial">
-  <h2 class="text-center">Ils ont testé Cohome&nbsp;</h2>
-  <div class="container content-wrapper">
-    <div class="row">
-      <div class="col-xs-10 col-xs-offset-1 col-sm-4 col-sm-offset-0 col-md-4 text-center">
-        <div id="glass-icon" class="icon-wrapper profile"></div>
-        <h3>Camille</h3>
-        <p class="job">UX Designer</p>
-        <p>"Service de coworking convivial, simple, accessible, fiable, à dimension humaine, où il est facile d'échanger avec les participants."</p>
-      </div>
-
-      <div class="col-xs-10 col-xs-offset-1 col-sm-4 col-sm-offset-0 col-md-4 text-center">
-        <div class="icon-wrapper" id="label-icon"></div>
-        <h3>Vincent</h3>
-        <p class="job">PR and community manager</p>
-        <p>"Je trouve que c'est agréable de travailler avec des personnes qu'on ne connait pas dans un cadre confortable et serein qui ne soit pas celui de l'entreprise."</p>
-      </div>
-
-      <div class="col-xs-10 col-xs-offset-1 col-sm-4 col-sm-offset-0 col-md-4 text-center">
-        <div class="icon-wrapper" id="discount-icon"></div>
-         <h3>Marie</h3>
-         <p class="job">Project manager</p>
-        <p>"J'ai pu me concentrer et travailler efficacement, dans un endroit confortable et accessible. C'est une solution parfaite pour travailler efficacement, tout en rencontrant des gens dans un contexte professionnel."</p>
-      </div>
-    </div>
-  </div>
-</section>
-
-<hr>
-
-<section class="press" id="press">
-  <div class="container content-wrapper">
-    <div class="row">
-     <div class="icon-elle icon clearfix col-md-2">
-      <a href="http://www.elle.fr/Societe/Le-travail/Forum-ELLE-Active/Paris-27-et-28-mars/Programme-vendredi/En-seance-pleniere-l-union-fera-notre-force-2894372" target="_blank">
-        <%= image_tag "media/elle.png", class: "" %>
-      </a>
-     </div>
-     <div class="icon-le-par icon clearfix col-md-2">
-      <a href="http://www.leparisien.fr/espace-premium/hauts-de-seine-92/elle-propose-d-installer-son-bureau-dans-votre-salon-02-03-2016-5590443.php" target="_blank">
-        <%= image_tag "media/le_parisien.png", class: "" %>
-     </div>
-      <div class="icon-20-min icon clearfix col-md-2">
-        <a href="http://www.20minutes.fr/paris/1789091-20160217-paris-viens-travailler-chez-grand-salon" target="_blank">
-        <%= image_tag "media/20_minutes.png", class: "" %>
-     </div>
-     <div class="icon-les-inr icon clearfix col-md-2">
-      <a href="http://www.lesinrocks.com/2015/12/22/actualite/viens-chez-moi-je-bosse-a-la-maison-le-coworking-a-domicile-se-developpe-11794662/" target="_blank">
-        <%= image_tag "media/les_inrocks.png", class: "" %>
-      </a>
-     </div>
-     <div class="icon-wedemain icon col-md-2">
-      <a href="http://www.wedemain.fr/Cohome-la-plateforme-qui-permet-aux-freelances-de-co-worker-a-la-maison_a1671.html" target="_blank">
-       <%= image_tag "media/wedemain.png", class: "" %>
-      </a>
-     </div>
-     <div class="icon-tf1 icon clearfix col-md-2">
-        <%= image_tag "media/tf1.png", class: "" %>
-    </div>
-  </div>
-</section>
-
-<hr>
-
-<div class="modal fade" id="video-modal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
-  <div class="modal-dialog" role="document">
-    <div class="modal-content">
-      <div class="modal-body">
-        <div class="modal-header">
-          <button type="button" class="close show-sm" data-dismiss="modal" aria-label="Close"><span>&times;</span></button>
-        </div>
-        <div class="video-container">
-              <iframe id="ytplayer" type="text/html" width="570" height="390"
-                src="https://www.youtube.com/embed/sQq1W93-eQc?rel=0"
-                frameborder="0"/>
-
-              <div id="videoIFrame" class="embed-responsive embed-responsive-16by9 embed hidden">
-                <iframe id="video" class="embed-responsive-item" src="" width="560" height="315" frameborder="0" allowfullscreen="allowfullscreen" autoplay="1">
-                </iframe>
-              </div>
-            </div>
-      </div>
-    </div>
-  </div>
-</div>
